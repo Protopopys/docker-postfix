@@ -1,0 +1,8 @@
+version: '3'
+services:
+
+  postfix_debian:
+    build:
+      context: ./debian
+      dockerfile: Dockerfile
+    image: ${REGISTRY}protopopys/docker-postfix:debian-jessie
