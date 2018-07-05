@@ -17,6 +17,5 @@ RUN sed -i "s/inet_interfaces = localhost/inet_interfaces = all/g" /etc/postfix/
 COPY --chown=root:root init.sh /root/init.sh
 COPY --chown=root:root rsyslog.conf /etc/rsyslog.conf
 COPY --chown=root:root listen.conf /etc/rsyslog.d/listen.conf
-COPY --chown=opendkim:opendkim domainkeys /etc/opendkim/domainkeys 
 #
 CMD /root/init.sh;/usr/bin/supervisord -c /etc/supervisor/supervisord.conf
