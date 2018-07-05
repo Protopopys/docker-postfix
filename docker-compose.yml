@@ -1,0 +1,9 @@
+version: '3'
+services:
+
+  postfix:
+    image: ${REGISTRY}protopopys/postfix:debian-jessie
+    environment:
+      maildomain: ${DOMAIN}
+      smtp_user: ${SMTP_USER}:${SMTP_PASS}
+      maxmailsize: ${MAXMAILSIZE}
